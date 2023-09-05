@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>qml;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="File">
+      <UniqueIdentifier>{b9dd3c31-2c2a-4188-9ec0-f76457124c5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Socket">
+      <UniqueIdentifier>{99c035be-aade-4165-8bc7-4351cb4ce2c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Service">
+      <UniqueIdentifier>{7fc6c5b4-4499-46c0-9aa5-d88d6e1b81d7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CoreNetworkGlobal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClCompile Include="CoreNetwork.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClInclude Include="CoreNetwork.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="XSync.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="XClient.cpp">
+      <Filter>Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="XServer.cpp">
+      <Filter>Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="XService.cpp">
+      <Filter>Service</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="XSync.h">
+      <Filter>File</Filter>
+    </QtMoc>
+    <QtMoc Include="XServer.h">
+      <Filter>Socket</Filter>
+    </QtMoc>
+    <QtMoc Include="XClient.h">
+      <Filter>Socket</Filter>
+    </QtMoc>
+    <QtMoc Include="XService.h">
+      <Filter>Service</Filter>
+    </QtMoc>
+  </ItemGroup>
+</Project>
