@@ -1,0 +1,12 @@
+@@ -0,0 +1,11 @@
+/*.user
+moc_*.*
+*/Debug/*
+*/Release/*
+*.obj
+*.idx
+*.props
+*.tlog
+*.log
+*.recipe
+*.stash

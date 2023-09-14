@@ -22,6 +22,18 @@ namespace CoreNetwork
 // Context: DefaultNamespace
 // Class:   XClient
 // Method:  XClient
+// Description: The XClient class is defined within the CoreNetwork namespace.
+// It inherits from the XService class and is essentially an implementation of
+// an object communicating via TCP (Transmission Control Protocol). It provides
+// a variety of public static call and action methods that allow users to connect
+// to a remote host and obtain information by sending TCP packets (data) to
+// the remote host. It consists of constructors, which can accept either a
+// host address or a hostname with a corresponding port number, and a destructor.
+// The available call and action methods allow for variation in data formats
+// that is dependent on the design of the remote host, allowing the user
+// to send data that follows the same design as that of their remote host,
+// providing customizability and flexibility. The class also has a few private
+// slots that handle socket errors such as disconnection.
 //----------------------------------------------------------------------------- 
 class CORENETWORK_EXPORT XClient :public XService
 {

@@ -17,6 +17,15 @@ namespace CoreNetwork
 // Context: DefaultNamespace
 // Class:   XAction
 // Method:  XAction
+// Description: The XService class is a subclass of QObject that is part of
+// the CoreNetwork namespace. It provides a number of functionalities that
+// are related to service management, such as setting and retrieving the root
+// path, retrieving the service version number, and accessing the current
+// logs. In addition to these built-in functionalities, XService also
+// provides a number of virtual functions that can be overridden to provide
+// additional functionality. For example, serviceName() can be overridden
+// to provide a custom name for the service, and serviceDescription()
+// can be overridden to provide a description of the service.
 //----------------------------------------------------------------------------- 
 class CORENETWORK_EXPORT XService  : public QObject
 {

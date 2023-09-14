@@ -20,6 +20,15 @@ namespace CoreNetwork
 // Context: DefaultNamespace
 // Class:   XServer
 // Method:  XServer
+// Description: The XServer class is a subclass of XService that acts as
+// a server for handling client requests. It provides functions for
+// opening the server on a specified port, checking the client's IP
+// address and port, and waiting for connections. It also allows
+// inclusion of other servers for efficient server management. The class
+// also contains slots for handling new incoming connections, reading
+// data from the connections, detecting errors and managing disconnections.
+// Overall, the XServer class is a useful tool when building
+// network-enabled applications in Qt.
 //----------------------------------------------------------------------------- 
 class CORENETWORK_EXPORT XServer :public XService
 {

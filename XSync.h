@@ -14,6 +14,15 @@ namespace CoreNetwork
 // Context: DefaultNamespace
 // Class:   XFileTransfer
 // Method:  XFileTransfer
+// Description: The XSync class is a subclass of XServer. It represents a
+//   network file synchronization service that is used for uploading, downloading,
+//   removing, and managing files and directories between a local and remote system.
+//   XSync has methods like sync, upload, download, remove, uploadDirectory,
+//   downloadDirectory, removeDirectory, files, tree, and treeInfo, which serve
+//   various functionalities mentioned above. Additionally, XSync also has
+//   public slots that communicate with other instances of the same class
+//   over a network. All operations are initiated by a base instance,
+//   which can then invoke the necessary methods of remote instances.
 //----------------------------------------------------------------------------- 
 
 class CORENETWORK_EXPORT XSync  : public XServer

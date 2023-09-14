@@ -1,0 +1,75 @@
+
+CORENETWORK
+===========
+
+The CoreNetwork module is a collection of classes that provides 
+functionality for building network-enabled applications.
+It allows for efficient server management, handling client requests, and communication 
+between a local and remote system with functionalities such as file synchronization.
+
+The module contains four classes: XService, XServer, XClient, and XSync.
+
+XService provides functions related to service management, such 
+as setting and retrieving the root path, retrieving the 
+service version number, and accessing the current logs.
+
+XServer acts as a server for handling client requests.
+
+XClient is an implementation of an object communicating via 
+TCP and provides a variety of public static call and action methods.
+
+XSync is a subclass of XServer that represents a network file synchronization
+service. It is used for uploading, downloading, removing, and managing files
+and directories between a local and remote system. 
+
+XService
+--------
+The XService class is a subclass of QObject that is part of
+the CoreNetwork namespace. It provides a number of functionalities that
+are related to service management, such as setting and retrieving the root
+path, retrieving the service version number, and accessing the current
+logs. In addition to these built-in functionalities, XService also
+provides a number of virtual functions that can be overridden to provide
+additional functionality. For example, serviceName() can be overridden
+to provide a custom name for the service, and serviceDescription()
+can be overridden to provide a description of the service.
+
+XServer
+-------
+The XServer class is a subclass of XService that acts as
+a server for handling client requests. It provides functions for
+opening the server on a specified port, checking the client's IP
+address and port, and waiting for connections. It also allows
+inclusion of other servers for efficient server management. The class
+also contains slots for handling new incoming connections, reading
+data from the connections, detecting errors and managing disconnections.
+Overall, the XServer class is a useful tool when building
+network-enabled applications in Qt.
+
+XClient
+-------
+The XClient class is defined within the CoreNetwork namespace.
+It inherits from the XService class and is essentially an implementation of
+an object communicating via TCP (Transmission Control Protocol). It provides
+a variety of public static call and action methods that allow users to connect
+to a remote host and obtain information by sending TCP packets (data) to
+the remote host. It consists of constructors, which can accept either a
+host address or a hostname with a corresponding port number, and a destructor.
+The available call and action methods allow for variation in data formats
+that is dependent on the design of the remote host, allowing the user
+to send data that follows the same design as that of their remote host,
+providing customizability and flexibility. The class also has a few private
+slots that handle socket errors such as disconnection.
+
+XSync
+-----
+The XSync class is a subclass of XServer. It represents a
+network file synchronization service that is used for uploading, downloading,
+removing, and managing files and directories between a local and remote system.
+XSync has methods like sync, upload, download, remove, uploadDirectory,
+downloadDirectory, removeDirectory, files, tree, and treeInfo, which serve
+various functionalities mentioned above. Additionally, XSync also has
+public slots that communicate with other instances of the same class
+over a network. All operations are initiated by a base instance,
+which can then invoke the necessary methods of remote instances.
+
